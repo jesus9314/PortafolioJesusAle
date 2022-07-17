@@ -14,6 +14,7 @@ body {
 	font-family: var(--spartan);
 	padding-top: 4.5rem;
 	background-color: #1d1d1d;
+    position:absolute;
 }
 
 [data-title]:hover:after {
@@ -283,7 +284,7 @@ body {
 	box-shadow: 1px 1px 10px 5px rgba(128, 128, 128, 0.5);
 }
 .contact{
-    padding: 2rem 0;
+    padding-top: 2rem;
 }
 .contact__container > h2{
     background: rgba(189, 189, 68, 1);
@@ -330,4 +331,69 @@ body {
 }
 .contact__content > i {
     font-size: 40px;
+}
+.contact__form{
+    border-radius: 5px;
+    background-color: #333;
+    padding: 2rem 3rem;
+    margin: 2rem auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 91%;
+}
+.contact__form > form{
+    margin-top: 1rem;
+}
+.row > *{
+    padding-left: 0;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.row > label{
+    font-family: var(--spartan);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+.row > input, .row > textarea{
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.but{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0;
+}
+.but > button[type="submit"]{
+    border: none;
+    padding: 0.5rem;
+    width: 150px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    background: rgba(189, 189, 68, 1);
+	background: -moz-linear-gradient(left, rgba(189, 189, 68, 1) 0%, rgba(217, 24, 75, 1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(189, 189, 68, 1)), color-stop(100%, rgba(217, 24, 75, 1)));
+	background: -webkit-linear-gradient(left, rgba(189, 189, 68, 1) 0%, rgba(217, 24, 75, 1) 100%);
+	background: -o-linear-gradient(left, rgba(189, 189, 68, 1) 0%, rgba(217, 24, 75, 1) 100%);
+	background: -ms-linear-gradient(left, rgba(189, 189, 68, 1) 0%, rgba(217, 24, 75, 1) 100%);
+	background: linear-gradient(to right, rgba(189, 189, 68, 1) 0%, rgba(217, 24, 75, 1) 100%);
+    color: white;
+}
+.footer{
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+.footer > p{
+    margin: 1rem 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 2px;
 }
