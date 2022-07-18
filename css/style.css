@@ -12,7 +12,7 @@
 }
 body {
 	font-family: var(--spartan);
-	padding-top: 4.5rem;
+	padding-top: 5rem;
 	background-color: #1d1d1d;
     position:absolute;
 }
@@ -56,8 +56,11 @@ body {
 	background: linear-gradient(to right, rgba(189, 189, 68, 1) 0%, rgba(217, 24, 75, 1) 100%);
 }
 .nav-item {
-	color: white;
+	color: black;
 	font-size: 15px;
+}
+.nav-link{
+    color: black;
 }
 .nav-link > i {
 	margin-right: 5px;
@@ -70,12 +73,23 @@ body {
 	color: black;
 	text-shadow: 1px 1px 10px #f5f5f5;
 }
+.navbar-toggler{
+    border-color: black;
+    border-radius: 5px;
+}
+.navbar-toggler > i{
+    font-size: 30px;
+}
+.main{
+	max-width: 750px;
+	margin: 0 auto;
+}
 .banner {
 	display: flex;
+	flex-direction: column-reverse;
 	gap: 2em;
 	align-items: center;
 	padding: 2rem;
-	height: 80vh;
 	border-bottom: 1px solid rgb(82, 82, 82);
 }
 .banner__content {
@@ -83,16 +97,17 @@ body {
 	flex-direction: column;
 	width: 100%;
 	gap: 1rem;
+	align-items: center;
 	justify-content: center;
 	font-family: var(--spartan);
-	padding: 2rem;
+	padding: 1rem;
 }
 .banner__title {
 	letter-spacing: 2px;
 	font-family: var(--Cedarvill);
 	padding: 1rem;
 	font-weight: 700;
-	font-size: 60px;
+	font-size: 35px;
 	background: rgba(189, 189, 68, 1);
 	background: -moz-linear-gradient(left, rgba(189, 189, 68, 1) 0%, rgba(217, 24, 75, 1) 100%);
 	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(189, 189, 68, 1)), color-stop(100%, rgba(217, 24, 75, 1)));
@@ -106,8 +121,8 @@ body {
 	display: block;
 	white-space: nowrap;
 	border-right: 4px solid white;
-	width: 16ch;
-	animation: typing 3s steps(16), blink 0.5s infinite step-end alternate;
+	width: 17ch;
+	animation: typing 3s steps(17), blink 0.5s infinite step-end alternate;
 }
 @keyframes typing {
 	from {
@@ -142,7 +157,7 @@ body {
 }
 .hab {
 	margin: 2rem 0;
-	padding: 2rem 0;
+	padding: 2rem 1rem;
 	border-bottom: 1px solid rgb(82, 82, 82);
 }
 .hab__container {
@@ -174,38 +189,37 @@ body {
 	line-height: 2;
 	text-align: justify;
 	color: white;
+	padding: 0 1rem;
 }
 .hab__cards {
 	display: flex;
+    flex-direction: column;
 	justify-content: center;
-}
-.hab__cards > ul {
-	list-style: none;
-	display: flex;
+    list-style: none;
 	color: rgb(160, 160, 160);
-	gap: 1rem;
+	gap: 2rem;
 	margin: 1rem 0;
 }
-.hab__cards > ul > li {
+.hab__cards > li {
 	background-color: #1d1d1d;
 	padding: 1rem;
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
-	width: 150px;
+	width: 90%;
 	align-items: center;
 	transition: 0.5s;
 	box-shadow: 1px 1px 25px 5px rgba(0, 0, 0, 0.5);
 }
-.hab__cards > ul > li:hover {
+.hab__cards  > li:hover {
 	color: white;
 	transform: scale(1.02);
 	box-shadow: 1px 1px 10px 5px rgba(48, 48, 48, 0.5);
 }
-.hab__cards > ul > li > i {
+.hab__cards > li > i {
 	font-size: 60px;
 }
-.hab__cards > ul > li > span {
+.hab__cards > li > span {
 	font-weight: 500;
 }
 .brand-1 {
@@ -248,6 +262,9 @@ body {
 	transition: 0.6s;
 	padding-bottom: 1rem;
 }
+.proyects__content{
+	text-align: center;
+}
 .proyects__content > h3 > a {
 	border-bottom: 1px solid rgb(82, 82, 82);
     font-weight: 700;
@@ -263,8 +280,8 @@ body {
 .proyects__content > p {
 	color: white;
 	font-weight: 300;
-	letter-spacing: 1.5px;
-	line-height: 1.5;
+	font-size: 18px;
+	line-height: 2;
 	text-align: justify;
 	margin: 3rem 0;
 }
@@ -279,12 +296,18 @@ body {
 	justify-content: center;
 }
 .proyects__figure > img {
-	width: 60%;
+	width: 100%;
 	margin: 0 auto;
 	box-shadow: 1px 1px 10px 5px rgba(128, 128, 128, 0.5);
 }
 .contact{
     padding-top: 2rem;
+}
+.contact__container{
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }
 .contact__container > h2{
     background: rgba(189, 189, 68, 1);
@@ -303,9 +326,8 @@ body {
 }
 .contact__sec{
     display: flex;
-    justify-content: space-evenly;
+	flex-direction: column;
     gap: 1rem;
-    flex-wrap: nowrap;
 }
 .contact__card{
     background-color: #333;
@@ -313,8 +335,9 @@ body {
     color: white;
     display: flex;
     gap:0.5rem ;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+	width: 100%;
 }
 .contact__content{
     display: flex;
@@ -333,22 +356,24 @@ body {
     font-size: 40px;
 }
 .contact__form{
-    border-radius: 5px;
     background-color: #333;
     padding: 2rem 3rem;
-    margin: 2rem auto;
+    margin-top: 3rem;
     color: white;
     display: flex;
     flex-direction: column;
-    width: 91%;
+    width: 100%;
 }
 .contact__form > form{
     margin-top: 1rem;
 }
 .row > *{
-    padding-left: 0;
+    padding: 0;
+	margin: 0;
 }
 .row{
+	padding: 0;
+	margin: 0;
     display: flex;
     flex-direction: row;
 }
@@ -363,14 +388,18 @@ body {
     border-radius: 5px;
 }
 .but{
-    display: flex;
+    /* display: flex;
     justify-content: flex-end;
-    margin: 1rem 0;
+    margin: 1rem 0; */
+	padding: 0;
+	width: 100%;
 }
 .but > button[type="submit"]{
     border: none;
     padding: 0.5rem;
-    width: 150px;
+	margin: 1rem 0;
+    width: 100%;
+	border-radius: 5px;
     letter-spacing: 2px;
     font-weight: 500;
     background: rgba(189, 189, 68, 1);
@@ -388,7 +417,9 @@ body {
     bottom: 0;
     padding: 1rem 0;
     display: flex;
-    justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
 }
 .footer > p{
     margin: 1rem 0;
@@ -396,4 +427,84 @@ body {
     font-weight: 300;
     color: white;
     letter-spacing: 2px;
+}
+.footer > .top {
+	border-bottom: double 1px rgb(73, 73, 73);
+}
+.footer > .name {
+	margin-left: 5px;
+	padding: 5px;
+	margin-top: -20px;
+}
+/* Modo Tableta */
+@media(min-width:768px){
+	body{
+		padding-top: 38rem;
+	}
+	.main{
+		max-width: 100%;
+	}
+	.banner{
+		height: 80vh;
+	}
+	.banner__content{
+		align-items: flex-start;
+	}
+	.banner__title{
+		font-size: 60px;
+		width: 16ch;
+	}
+	.banner__title{
+		padding: 2rem;
+	}
+	.hab{
+		width: 100%;
+		padding: 2rem 0;
+	}
+    .hab__cards {
+        display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+        justify-content: center;
+		gap: 1rem;
+    }
+    .hab__cards > li {
+        width: 150px;
+    }
+	.proyects{
+		max-width: 100%;
+	}
+	.proyects__content{
+		text-align: left;
+	}
+	.contact__container{
+	}
+	.contact__sec{
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.footer{
+		flex-direction: row;
+		justify-content: center;
+	}
+	.footer > .top {
+		border-bottom: none;
+	}
+	.footer > .name {
+		border-left: double 1px rgb(73, 73, 73);
+		margin: 0;
+		padding: 0;
+		margin-left: 5px;
+		padding-left: 5px;
+	}
+}
+/* Modo Desktop*/
+@media (min-width:992px){
+	body{
+		padding-top: 5rem;
+	}
+	.banner {
+		display: flex;
+		flex-direction: row;
+	}
 }
