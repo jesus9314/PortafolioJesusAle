@@ -95,19 +95,15 @@ body {
 .banner__content {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
 	gap: 1rem;
-	align-items: center;
 	justify-content: center;
 	font-family: var(--spartan);
-	padding: 1rem;
 }
 .banner__title {
-	letter-spacing: 2px;
 	font-family: var(--Cedarvill);
 	padding: 1rem;
 	font-weight: 700;
-	font-size: 35px;
+	font-size: 30px;
 	background: rgba(189, 189, 68, 1);
 	background: -moz-linear-gradient(left, rgba(189, 189, 68, 1) 0%, rgba(217, 24, 75, 1) 100%);
 	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(189, 189, 68, 1)), color-stop(100%, rgba(217, 24, 75, 1)));
@@ -121,8 +117,8 @@ body {
 	display: block;
 	white-space: nowrap;
 	border-right: 4px solid white;
-	width: 17ch;
-	animation: typing 3s steps(17), blink 0.5s infinite step-end alternate;
+	width: 16ch;
+	animation: typing 3.5s steps(16), blink 0.5s infinite step-end alternate;
 }
 @keyframes typing {
 	from {
